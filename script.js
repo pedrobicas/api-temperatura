@@ -4,7 +4,7 @@ let icon
 // Função consulta pelo IP
 function consultar_ip() {
   // Fetch da API por IP
-  let url = 'http://cors.io/?https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de826&user_ip=remote'
+  let url = 'https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de826&user_ip=remote'
 
   fetch(url)
     .then((response) => {
@@ -50,7 +50,7 @@ function consultar_ip() {
 function consultar() {
   cidade = document.getElementById('cidade').value
   // Fetch da API pelo o nome da cidade
-  let url = `http://cors.io/?https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de82&city_name=${cidade}`
+  let url = `https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de82&city_name=${cidade}`
 
   fetch(url)
     .then((response) => {
