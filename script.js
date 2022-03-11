@@ -8,7 +8,7 @@ function consultar_ip() {
 
   options = {
 
-    mode: "cors", // same-origin, no-cors
+    mode: "no-cors", // same-origin, no-cors
 
   }
   fetch(url, options)
@@ -58,7 +58,7 @@ function consultar() {
   let url = `https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de82&city_name=${cidade}`
   options = {
 
-      mode: "cors", // same-origin, no-cors
+      mode: "no-cors", // same-origin, no-cors
 
     }
   fetch(url, options)
