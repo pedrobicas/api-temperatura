@@ -6,12 +6,7 @@ function consultar_ip() {
   // Fetch da API por IP
   let url = 'https://api.hgbrasil.com/weather?format=json-cors&key=ac06e776&user_ip=remote'
 
-  options = {
-
-    mode: "no-cors", // same-origin, no-cors
-
-  }
-  fetch(url, options)
+  fetch(url)
     .then((response) => {
       return response.json()
     })
@@ -56,12 +51,8 @@ function consultar() {
   cidade = document.getElementById('cidade').value
   // Fetch da API pelo o nome da cidade
   let url = `https://api.hgbrasil.com/weather?format=json-cors&key=ac06e776&city_name=${cidade}`
-  options = {
 
-      mode: "no-cors", // same-origin, no-cors
-
-    }
-  fetch(url, options)
+  fetch(url)
     .then((response) => {
       return response.json()
     })
