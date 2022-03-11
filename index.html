@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Temp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="cards d-flex align-items-center flex-column">
+        <div class="input-group text-center" style="max-width: 28rem;">
+            <input id='cidade' type="text" class="form-control" placeholder="Insira sua cidade"
+                aria-label="Insira sua cidade" aria-describedby="button-addon2">
+            <button class="btn btn-outline-dark" type="button" onclick="consultar()">Consultar</button>
+        </div>
+        <div id="cardToday " class="">
+            <div class="card text-center shadow-lg" style="max-width: 28rem; background-color: transparent;">
+                <div class="card-header">CLIMA E TEMPERATURA</div>
+                <div class="card-body">
+                    <div class="d-flex flex-row">
+                        <div class="container-temp">
+                            <i id="iconToday"></i>
+                        </div>
+                        <div class="card-container">
+                            <div id="cityToday"></div>
+                            <div id="dateToday"></div>
+                            <div class="container-temp">
+
+                                <div id="tempToday"></div>
+                            </div>
+                            <div id="descriptionToday"></div>
+                            <div id="min-maxToday"></div>
+                            <div id="weekdayToday"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-direction-row flex-wrap align-items-center justify-content-center">
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city1"></div>
+                        <div id="date1"></div>
+                        <div class="container-temp1">
+                            <i id="icon1"></i>
+                            <div id="temp1"></div>
+                        </div>
+                        <div id="description1"></div>
+                        <div id="min-max1"></div>
+                        <div id="weekday1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city2"></div>
+                        <div id="date2"></div>
+                        <div class="container-temp2">
+                            <i id="icon2"></i>
+                            <div id="temp2"></div>
+                        </div>
+                        <div id="description2"></div>
+                        <div id="min-max2"></div>
+                        <div id="weekday2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city3"></div>
+                        <div id="date3"></div>
+                        <div class="container-temp3">
+                            <span id="icon3"></span>
+                            <div id="temp3"></div>
+                        </div>
+                        <div id="description3"></div>
+                        <div id="min-max3"></div>
+                        <div id="weekday3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city4"></div>
+                        <div id="date4"></div>
+                        <div class="container-temp4">
+                            <span id="icon4"></span>
+                            <div id="temp4"></div>
+                        </div>
+                        <div id="description4"></div>
+                        <div id="min-max4"></div>
+                        <div id="weekday4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city5"></div>
+                        <div id="date5"></div>
+                        <div class="container-temp5">
+                            <span id="icon5"></span>
+                            <div id="temp5"></div>
+                        </div>
+                        <div id="description5"></div>
+                        <div id="min-max5"></div>
+                        <div id="weekday5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city6"></div>
+                        <div id="date6"></div>
+                        <div class="container-temp6">
+                            <span id="icon6"></span>
+                            <div id="temp6"></div>
+                        </div>
+                        <div id="description6"></div>
+                        <div id="min-max6"></div>
+                        <div id="weekday6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city7"></div>
+                        <div id="date7"></div>
+                        <div class="container-temp7">
+                            <span id="icon7"></span>
+                            <div id="temp7"></div>
+                        </div>
+                        <div id="description7"></div>
+                        <div id="min-max7"></div>
+                        <div id="weekday7"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city8"></div>
+                        <div id="date8"></div>
+                        <div class="container-temp8">
+                            <span id="icon8"></span>
+                            <div id="temp8"></div>
+                        </div>
+                        <div id="description8"></div>
+                        <div id="min-max8"></div>
+                        <div id="weekday8"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-geral p.o m.o d-flex justify-content-center">
+                <div class="card text-center shadow-lg" style="min-width: 15rem; background-color: transparent;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="city9"></div>
+                        <div id="date9"></div>
+                        <div class="container-temp9">
+                            <span id="icon9"></span>
+                            <div id="temp9"></div>
+                        </div>
+                        <div id="description9"></div>
+                        <div id="min-max9"></div>
+                        <div id="weekday9"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
