@@ -56,8 +56,12 @@ function consultar() {
   cidade = document.getElementById('cidade').value
   // Fetch da API pelo o nome da cidade
   let url = `https://api.hgbrasil.com/weather?format=json-cors&key=0bc8de82&city_name=${cidade}`
+  options = {
 
-  fetch(url)
+      mode: "cors", // same-origin, no-cors
+
+    }
+  fetch(url, options)
     .then((response) => {
       return response.json()
     })
