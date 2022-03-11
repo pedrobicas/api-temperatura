@@ -3,6 +3,7 @@
 <img width="600px" height="300px" src="https://cdn.discordapp.com/attachments/905749782721597455/951663945062686720/unknown.png" alt="Imagem Site"> 
 
 Um simples site que mostra o clima e a previsão do tempo nos proximos 10 dias. Ao abrir o site ele vai pegar sua localização por IP e ja inserir os dados do clima e possui a opção de consultar pelo o nome de alguma cidade.
+[Link](https://pedrobicas.github.io/api-temperatura/)
 <br>
 <br>
 Utilizei a API [HG Weather](https://hgbrasil.com/status/weather), uma simples e pratica API de clima e tempo, com diversos dados e objetiva
